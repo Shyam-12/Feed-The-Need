@@ -1,0 +1,246 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 1280px)
+{
+    ::selection{
+        height: auto !important;
+        display: initial;
+        padding: 100px;
+        box-sizing: border-box;
+    }
+    .banner-text
+    {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-top: 100px;
+        transform: translateY(0);
+        max-width: 700px;
+        z-index: 1001;
+    
+    }
+}
+
+/*
+h1{
+    position: absolute;
+    width: 346px;
+    height: 60px;
+    left: 586px;
+    top: 66px;
+}
+
+.main-head {
+    position: absolute;
+    width: 235px;
+    height: 269px;
+    left: 1026px;
+    top: 252px;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 80.54px;
+}
+
+.second-head {
+    position: absolute;
+    width: 340px;
+    height: 108px;
+    left: 1026px;
+    top: 500px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45.25px;
+}
+
+.btn {
+    position: absolute;
+    width: 304px;
+    height: 62px;
+    left: 957px;
+    top: 620px;
+}
+*/
+
+section
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.banner-text{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    max-width: 700px;
+
+}
+
+.banner-text h2, .banner-text h3 {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    transform-origin: left;
+    text-transform: uppercase;
+    transform: scaleX(0);
+    animation: showTextReverse 1s ease-in-out forwards;;
+}
+
+.banner-text h2{
+    font-size: 6em;
+    animation-delay: 2s;
+}
+
+.banner-text h3{
+    font-size: 3em;
+    animation-delay: 3s;
+}
+
+.banner-text h2:before,
+.banner-text h3:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    transform-origin: right;
+    animation: showText 1s ease-in-out forwards;
+    animation-delay: 3s;
+}
+.banner-text h3:before
+{
+    animation-delay: 4s;
+}
+
+.btn {
+    opacity: 0;
+    font: 500;
+    font-size: 1rem;
+    animation: fadeInBottom 0.5s linear forwards;
+    animation-delay: 5.5s;
+    margin-top: 20px;
+    opacity: 0;
+    display: inline-block;
+    margin: 20px 0 0;
+    padding: 15px 20px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+@keyframes showText 
+{
+    0%
+    {
+         transform: scaleX(1);
+    }
+    100% {
+        transform: scaleX(0);
+    }
+}
+
+@keyframes showTextReverse {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes fadeInBottom {
+    0% 
+    {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100%
+    {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.image {
+    opacity: 0;
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: fadeIN 1s linear forwards;
+    animation-delay: 6s;
+}
+
+@keyframes fadeIN {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    padding: 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+.header ul{
+   margin: 0;
+   padding: 0;
+   display: flex; 
+}
+
+.header ul li {
+    /* opacity: 0; */
+    list-style: none;
+    margin: 0 10px;
+}
+
+.header ul li:last-child
+{
+    margin-right: 0;
+}
+
+.header ul li a{
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #000;
+    padding: 5px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.header h1{
+    font-size: 3rem;
+}
+
+.header ul li a.active,
+.header ul li a:hover
+{
+    background: #000;
+    color: #fff;
+}
