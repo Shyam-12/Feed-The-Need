@@ -17,3 +17,10 @@ h1
     margin-left: 5rem;
     color: white;
 }
+
+.instrcn {
+    color: brown;
+    position: absolute;
+    left: 70%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
